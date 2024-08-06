@@ -3,6 +3,8 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/navbar";
 import BootstrapClient from "./components/BootstrapClient";
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
+import Footer from "./components/Footer";
 
 const prompt = Prompt({ weight:['400', '700'], subsets: ["latin"] });
 
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <BootstrapClient />
+        <Footer/>
         </body>
     </html>
   );
