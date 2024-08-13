@@ -12,7 +12,7 @@ export default function Page() {
 
     return (
         <>
-            <div style={{ backgroundColor: 'white', minHeight: '100vh' }}>
+             <div style={{ background: 'linear-gradient(to right,#a5d6a7, #ff8a65)', }}>
                 <br /><br /><br /><br />
                 <div className="container">
                     <div className="card">

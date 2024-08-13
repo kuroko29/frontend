@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function carousel(){
     return(
       <>
-       <div style={{backgroundColor:'pink', minHeight:'100'}}>
+       
       <br /><br /><br />
        <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
     <div className="carousel-inner">
@@ -26,7 +26,7 @@ export default function carousel(){
       <span className="visually-hidden">Next</span>
     </button>
   </div>
-  </div>
+  
   </>
     )
 }

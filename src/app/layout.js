@@ -6,6 +6,7 @@ import BootstrapClient from "./components/BootstrapClient";
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import Footer from "./components/Footer";
 
+
 const prompt = Prompt({ weight:['400', '700'], subsets: ["latin"] });
 
 export const metadata = {

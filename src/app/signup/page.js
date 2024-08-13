@@ -12,7 +12,9 @@ export default function Page() {
     return (
         <>
             <br /><br /><br />
-            <div style={{ backgroundColor: "white" }}>
+            <div style={{ background: 'linear-gradient(to right, #a5d6a7, #ff8a65)', 
+                    padding: '20px', 
+                    minHeight: '100vh'}}>
                 <div className="container">
                     <div className="card">
                         <h5 className="card-header">Featured</h5>

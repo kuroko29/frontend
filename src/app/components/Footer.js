@@ -2,7 +2,10 @@ import Image from "next/image"
 
 export default function Footer(){
     return(
-        <div style={{backgroundColor:'white', minHeight:'100'}}>
+      <div style={{ 
+        background: 'linear-gradient(to right,#a5d6a7, #ff8a65)', 
+        padding: '20px', 
+        minHeight: '100vh'}}>
       <div className="container">
         <footer className="py-5">
           <div className="row">
