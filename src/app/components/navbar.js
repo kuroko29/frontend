@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 
 export default function Navbar() {
   // Define inline styles for the navbar
@@ -7,13 +8,12 @@ export default function Navbar() {
     backgroundColor: 'rgba(255, 255, 255, 0.8)', // Semi-transparent background
     backdropFilter: 'blur(10px)', // Blur effect
     borderBottom: '1px solid rgba(0, 0, 0, 0.1)', // Optional: light border for better visibility
-    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', // Optional: subtle shadow for depth
   };
 
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-light fixed-top"
+        className="navbar navbar-expand-lg navbar-light fixed-top shadow-lg" // Added shadow-lg class
         style={navbarStyle}
       >
         <div className="container-fluid">
@@ -38,27 +38,31 @@ export default function Navbar() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mx-auto ">
               <li className="nav-item">
                 <Link
-                  className="nav-link btn btn-outline-danger mx-2 fs-5 mt-2"
+                  className="nav-link btn btn-outline-custom mx-2 fs-5 mt-2"
                   aria-current="page"
                   href="/"
                 >
+                  <i class="bi bi-house-door-fill"> </i> 
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link btn btn-outline-danger mx-2 fs-5 mt-2"
-                  href="/about"
+                  className="nav-link btn btn-outline-custom mx-2 fs-5 mt-2"
+                  aria-current="page"
+                  href="about"
                 >
+                   <i className="bi bi-exclamation-circle-fill"> </i>
                   About
                 </Link>
               </li>
               <li className="nav-item dropdown mx-2 fs-5 mt-2">
                 <a
-                  className="nav-link btn btn-outline-danger dropdown-toggle"
+                  className="nav-link btn btn-outline-custom dropdown-toggle"
+                  aria-current="page"
                   href="/service"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -67,16 +71,30 @@ export default function Navbar() {
                   Service
                 </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/service">Service</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="https://genshin.hoyoverse.com/th/home" target="_blank">Additional information</a></li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      className="nav-link btn-outline-custom"
+                      aria-current="page"
+                      href="https://genshin.hoyoverse.com/th/home"
+                      target="_blank"
+                    >
+                      <i className="bi bi-box-arrow-in-down"></i>
+                      Download Games
+                    </a>
+                  </li>
                 </ul>
+
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link btn btn-outline-danger mx-2 fs-5 mt-2"
+                  className="nav-link btn btn-outline-custom mx-2 fs-5 mt-2"
+                  aria-current="page"
                   href="/contact"
                 >
+                  <i class="bi bi-telephone-fill"> </i>
                   Contact
                 </Link>
               </li>

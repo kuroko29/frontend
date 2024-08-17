@@ -1,63 +1,112 @@
 'use client';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function Page() {
-    // State to toggle password visibility
-    const [showPassword, setShowPassword] = useState(false);
+export default function SignIn() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [animateCard, setAnimateCard] = useState(false);
 
-    // Toggle password visibility
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
-    return (
-        <>
-             <div style={{ background: 'linear-gradient(to right,#a5d6a7, #ff8a65)', }}>
-                <br /><br /><br /><br />
-                <div className="container">
-                    <div className="card">
-                        <h5 className="card-header">Signin</h5>
-                        <div className="card-body shadow-lg">
-                            <div className="input-group mb-3">
-                                <span className="input-group-text">
-                                    <i className="bi bi-person-circle"></i>
-                                </span>
-                                <div className="form-floating">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="floatingInputGroup1"
-                                        placeholder="Username"
-                                    />
-                                    <label htmlFor="floatingInputGroup1">Username</label>
-                                </div>
-                            </div>
+  useEffect(() => {
+    // Trigger the animation after the component mounts
+    const timer = setTimeout(() => {
+      setAnimateCard(true);
+    }, 100); // Small delay to ensure animation starts after the component is rendered
 
-                            <div className="input-group mb-3">
-                                <span className="input-group-text">
-                                    <i className="bi bi-key-fill"></i>
-                                </span>
-                                <div className="form-floating">
-                                    <input
-                                        type={showPassword ? 'text' : 'password'}
-                                        className="form-control"
-                                        id="floatingPassword"
-                                        placeholder="Password"
-                                    />
-                                    <label htmlFor="floatingPassword">Password</label>
-                                </div>
-                                <span
-                                    className="input-group-text"
-                                    onClick={togglePasswordVisibility}
-                                    style={{ cursor: 'pointer' }}
-                                >
-                                    <i className={showPassword ? 'bi bi-eye-slash' : 'bi bi-eye'}></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      <div style={{ 
+        background: 'linear-gradient(to right, #ad7fef, #FFF9C4)', 
+        padding: '20px', 
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <div className="container d-flex justify-content-center align-items-center" style={{ width: '100%', maxWidth: '400px' }}>
+          <div className="card" style={{
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', // Enhanced shadow for card
+            borderRadius: '12px', // Slightly rounded corners
+            padding: '20px',
+            width: '100%',
+            transform: animateCard ? 'translateY(0)' : 'translateY(-50px)',
+            opacity: animateCard ? 1 : 0,
+            transition: 'transform 0.5s ease-out, opacity 0.5s ease-out'
+          }}>
+            <h5 className="card-header text-center" style={{ fontWeight: 'bold' }}>Sign In</h5>
+            <div className="card-body">
+              <div className="mb-3">
+                <label htmlFor="inputEmail" className="form-label">Email</label>
+                <div className="input-group">
+                  <div className="input-group-text" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
+                    <i className="bi bi-envelope-fill"></i>
+                  </div>
+                  <input 
+                    type="email" 
+                    className="form-control" 
+                    id="inputEmail" 
+                    placeholder="Email" 
+                    style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}
+                  />
                 </div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="inputPassword" className="form-label">Password</label>
+                <div className="input-group">
+                  <div className="input-group-text" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
+                  <i class="bi bi-lock-fill"></i>
+                  </div>
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    className="form-control"
+                    id="inputPassword"
+                    placeholder="Password"
+                    style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}
+                  />
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary"
+                    onClick={togglePasswordVisibility}
+                  >
+                    <i className={`bi ${showPassword ? 'bi-eye-slash-fill' : 'bi-eye-fill'}`}></i>
+                  </button>
+                </div>
+              </div>
+              <div className="col-12">
+                <p className="text-body-secondary">
+                  Don't have an account?  <a href="/signup" className="text-primary">Sign Up</a>
+                </p>
+                <div className="col-12 d-grid gap-2">
+                  <button
+                    type="submit"
+                    className="btn btn-success"
+                    style={{
+                      transition: 'background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease',
+                      transform: 'scale(1)',
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                      e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                    }}
+                  >
+                    Sign In
+                  </button>
+                </div>
+              </div>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
