@@ -19,6 +19,7 @@ export default function Footer() {
     };
 
     return (
+        <div style={{backgroundColor:'white',}}>
         <div style={footerStyle}>
             <div className="container-fluid">
                 <footer className="py-3 my-4">
@@ -28,6 +29,7 @@ export default function Footer() {
                     <p className="text-center" style={textStyle}>© Copyright 2024. Powered by MaoAnime</p>
                 </footer>
             </div>
+        </div>
         </div>
     );
 }

@@ -1,15 +1,22 @@
+
+
 export default function about() {
-    return (
-      <>
+    return ( 
+    <>
       <br /><br /><br />
-      <div style={{backgroundColor:'white', minHeight:'100vh'}}>
       
-       <center>
-        <h1>
-            ยังไม่ได้ทำ    
-        </h1>
-       </center>
-       </div>
-      </>
-      )
+      <div style={{backgroundColor:'#ba68c8', minHeight:'100vh'}}>
+      <div class="card">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                </div>
+            </div>
+
+     </>  )
 }

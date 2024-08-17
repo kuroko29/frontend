@@ -5,8 +5,7 @@ import Card from "./components/Card";
 import Footer from "./components/Footer"
 export default function Home() {
   return (
-    <div style={{ 
-      background: '(#FFD700)', minHeight: '100vh'}}>
+    <div style={{backgroundColor:'#7e57c2', minHeight:'100vh'}}>
     <>
    <Carousel />
    <br />
