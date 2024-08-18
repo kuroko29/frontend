@@ -14,7 +14,7 @@ export default function Carousel() {
                         <Image src="/assets/img/02.png" layout="responsive" className="d-block w-100" width={1920} height={960} alt="..." />
                     </div>
                     <div className="carousel-item" data-bs-interval="5000">
-                        <Image src="/assets/img/4.png" layout="responsive" className="d-block w-100" width={1920} height={960} alt="..." />
+                        <Image src="/assets/img/03.png" layout="responsive" className="d-block w-100" width={1920} height={960} alt="..." />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
