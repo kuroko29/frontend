@@ -1,0 +1,60 @@
+/* styles.module.css */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background: url('/assets/img/k.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    flex-wrap: wrap;
+    /* เพิ่มการเบลอพื้นหลัง */
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* ใช้พื้นหลังของ .container */
+    filter: blur(8px); /* ปรับค่าตามที่ต้องการ */
+    z-index: -1; /* ให้อยู่ด้านหลังเนื้อหา */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.8s ease forwards; /* ใช้ animation เลื่อนเข้ามา */
+}
+
+.iframeWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 0.8s ease forwards; /* ใช้ animation เลื่อนเข้ามา */
+}

@@ -228,3 +228,21 @@
     transform: rotate(0deg);
   }
 }
+ 
+/* page.module.css */
+.slideIn {
+  animation: slideIn 0.5s ease-out; /* ปรับเวลาและ easing ให้เอฟเฟกต์สมูท */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px); /* เลื่อนจากด้านบนลงมาด้านล่าง */
+    filter: blur(10px); /* เริ่มต้นด้วยเบลอ */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0); /* เบลอหายไปเมื่อเลื่อนเข้ามาถึง */
+  }
+}

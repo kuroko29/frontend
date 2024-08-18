@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+
 
 export default function Navbar() {
   // Define inline styles for the navbar
@@ -38,7 +38,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto ">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
                   className="nav-link btn btn-outline-custom mx-2 fs-5 mt-2"

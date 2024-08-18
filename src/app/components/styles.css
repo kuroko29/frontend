@@ -22,19 +22,20 @@
   border-radius: 15px; /* ปรับค่าตามที่ต้องการ */
   overflow: hidden; /* ทำให้เนื้อหาภายในไม่หลุดออกจากขอบมน */
 }
-.car {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-body {
   transition: background-color 0.3s ease;
 }
 
-.car:hover {
-  transform: scale(1.05); /* ขยายการ์ดเล็กน้อยเมื่อเอาเมาส์ไปชี้ */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* เพิ่มเงาขณะโฮเวอร์ */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.car:hover .card-body {
-  background-color: rgba(0, 0, 0, 0.1); /* เปลี่ยนสีพื้นหลังของ card-body เมื่อโฮเวอร์ */
+.card:hover .card-body {
+  background-color: rgba(0, 0, 0, 0.1);
 }

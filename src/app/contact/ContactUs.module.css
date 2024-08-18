@@ -1,0 +1,150 @@
+/* ContactUs.module.css */
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background: url('/assets/img/b.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    flex-wrap: wrap;
+}
+
+.leftPanel,
+.rightPanel {
+    flex: 1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    animation: slideIn 0.6s ease-out;
+}
+
+.leftPanel {
+    background-color: #351a40;
+    color: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: auto;
+    transform: scale(1);
+}
+
+.rightPanel {
+    background-color: rgba(197, 197, 164, 0.185);
+    padding: 50px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transform: scale(1);
+}
+
+.leftPanel:hover,
+.rightPanel:hover {
+    transform: scale(1.03); /* ซูมขึ้นเล็กน้อย */
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input,
+.textarea {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #DADCE0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textarea {
+    height: 200px;
+    resize: none;
+}
+
+.button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1A73E8;
+    color: white;
+    cursor: pointer;
+    align-self: flex-start;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltipVisible {
+    visibility: visible;
+    opacity: 1;
+}

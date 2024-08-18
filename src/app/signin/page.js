@@ -21,7 +21,10 @@ export default function SignIn() {
   return (
     <>
       <div style={{ 
-        background: 'linear-gradient(to right, #ad7fef, #FFF9C4)', 
+        backgroundImage: 'url(/assets/img/a.png)', // เปลี่ยน URL เป็นเส้นทางของรูปภาพของคุณ
+        backgroundSize: 'cover', // ทำให้รูปภาพครอบคลุมทั้งพื้นที่
+        backgroundPosition: 'center', // จัดตำแหน่งรูปภาพให้อยู่กลาง
+        backgroundRepeat: 'no-repeat', // ไม่ให้รูปภาพซ้ำ
         padding: '20px', 
         minHeight: '100vh',
         display: 'flex',
@@ -59,7 +62,7 @@ export default function SignIn() {
                 <label htmlFor="inputPassword" className="form-label">Password</label>
                 <div className="input-group">
                   <div className="input-group-text" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
-                  <i class="bi bi-lock-fill"></i>
+                    <i className="bi bi-lock-fill"></i>
                   </div>
                   <input
                     type={showPassword ? 'text' : 'password'}
@@ -79,7 +82,7 @@ export default function SignIn() {
               </div>
               <div className="col-12">
                 <p className="text-body-secondary">
-                  Don't have an account?  <a href="/signup" className="text-primary">Sign Up</a>
+                  Don't have an account? <a href="/signup" className="text-primary">Sign Up</a>
                 </p>
                 <div className="col-12 d-grid gap-2">
                   <button

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function SignUp() {
   // States for password visibility
@@ -43,9 +43,15 @@ export default function SignUp() {
   return (
     <>
       <div style={{ 
-        background: 'linear-gradient(to right, #6a00ff, #98FF98)', 
+        backgroundImage: 'url(/assets/img/c.png)', // เปลี่ยน URL เป็นเส้นทางของรูปภาพที่คุณต้องการใช้เป็นพื้นหลัง
+        backgroundSize: 'cover', // ทำให้รูปภาพครอบคลุมทั้งพื้นที่
+        backgroundPosition: 'center', // จัดตำแหน่งรูปภาพให้อยู่กลาง
+        backgroundRepeat: 'no-repeat', // ไม่ให้รูปภาพซ้ำ
         padding: '20px', 
-        minHeight: '100vh'
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}>
         <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
           <div 
