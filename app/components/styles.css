@@ -1,0 +1,41 @@
+.btn-outline-custom {
+  color: #000000;
+  border-color: #9966FF;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-custom:hover {
+  background-color: #9966FF;
+  color: white;
+  border-color: #9966FF;
+}
+.nav-link .bi {
+  vertical-align: middle; /* จัดตำแหน่งแนวตั้งให้ไอคอนตรงกลางของข้อความ */
+  margin-right: 8px; /* เพิ่มช่องว่างระหว่างไอคอนกับข้อความ */
+}
+.carousel-inner img {
+  border-radius: 15px; /* ปรับค่าตามที่ต้องการเพื่อให้ขอบมน */
+}
+
+.carousel-item {
+  border-radius: 15px; /* ปรับค่าตามที่ต้องการ */
+  overflow: hidden; /* ทำให้เนื้อหาภายในไม่หลุดออกจากขอบมน */
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body {
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
